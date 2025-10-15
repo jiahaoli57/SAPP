@@ -1,7 +1,7 @@
 # SAPP: Sparse Attention Transformers for Pattern Recognition in Portfolio Management
 
 <div align="center">
-<img align="center" src=figures/SAPP.jpg width="45%"/> 
+<img align="center" src=figures/SAPP.jpg width="65%"/> 
 
 <div>&nbsp;</div>
 
