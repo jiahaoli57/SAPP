@@ -134,36 +134,6 @@ def actual_portfolio_selection(final_scores):
     return portfolio
 
 
-def send_message_dingding(dingding_message):
-    headers_dingding = {
-        "Content-Type": "application/json",
-        "Charset": "UTF-8"
-    }
-    content = f"\n" \
-              f"message：\tmodel finish training & testing\n" \
-              f"logdir：\t{dingding_message['logdir']}\n" \
-              f"CW：\t{dingding_message['CW']}\n" \
-
-    webhook = "https://oapi.dingtalk.com/robot/send?access_token=xxxxxxxxxxxxxxxxxxxxxxxx"  # your own dingding api
-    message = {
-        "msgtype": "text",
-        "text": {
-            "content": content
-        },
-        "at": {
-            "isAtAll": True
-        }
-    }
-    message_json = json.dumps(message)
-    try:
-        info = requests.post(url=webhook, data=message_json, headers=headers_dingding, verify=False).json()
-    except Exception as e:
-        print(f"{e}")
-        return
-    if info.get("errcode") != 0:
-        print(f"{info}")
-
-
 def get_variable_name(var):
     return next(key for key, value in globals().items() if value is var)
 
