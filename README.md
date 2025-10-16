@@ -74,9 +74,6 @@ For some of the more recent state-of-the-art baselines not included in the gener
 </details>
 
 
-## Code Availability Note⏳
-The code for this project (SAPP: Sparse Attention Transformers for Pattern Recognition in Portfolio Management) is currently being prepared for public release. As our team has just completed the submission of the revised manuscript, we require 1-2 days to finalize code checks and organize instructions.
-
 ## License
 
 Released under the [MIT License](https://github.com/jiahaoli57/sapp/blob/main/LICENSE).
