@@ -14,11 +14,11 @@
 
 ## About SAPP
 
-**SAPP (<u>S</u>parse <u>A</u>ttention <u>P</u>ortfolio <u>P</u>olicy)** is a novel and efficient pattern recognition framework for portfolio management (PM). Traditional Transformer models, despite their power, suffer from quadratic computational complexity, making them impractical for real-time portfolio rebalancing with long financial time series. SAPP addresses this critical challenge by introducing a dual-stage architecture with **near-linear complexity**.
+**SAPP (<ins>S</ins>parse <ins>A</ins>ttention <ins>P</ins>ortfolio <ins>P</ins>olicy)** is a novel and efficient pattern recognition framework for portfolio management (PM). Traditional Transformer models, despite their power, suffer from quadratic computational complexity, making them impractical for real-time portfolio rebalancing with long financial time series. SAPP addresses this critical challenge by introducing a dual-stage architecture with **near-linear complexity**.
 
 Our framework integrates:
-1.  **Stacked Sparse Transformer Blocks (STBs)**: To efficiently capture long-range temporal dependencies in financial data.
-2.  **A Correlation Information Decision Module (CIDM)**: To explicitly model cross-asset correlations for informed investment decisions.
+1.  **Stacked <ins>S</ins>parse <ins>T</ins>ransformer <ins>B</ins>locks (STBs)**: To efficiently capture long-range temporal dependencies in financial data.
+2.  **A <ins>C</ins>orrelation <ins>I</ins>nformation <ins>D</ins>ecision <ins>M</ins>odule (CIDM)**: To explicitly model cross-asset correlations for informed investment decisions.
 
 Trained within a deep reinforcement learning framework, SAPP learns robust policies that consistently outperform a wide range of classic and state-of-the-art strategies, including its full-attention counterpart, demonstrating superior performance, efficiency, and scalability.
 
