@@ -14,7 +14,7 @@
 
 ## About SAPP
 
-**SAPP (Sparse Attention Portfolio Policy)** is a novel and efficient pattern recognition framework for portfolio management (PM). Traditional Transformer models, despite their power, suffer from quadratic computational complexity, making them impractical for real-time portfolio rebalancing with long financial time series. SAPP addresses this critical challenge by introducing a dual-stage architecture with **near-linear complexity**.
+**SAPP (<u>S</u>parse <u>A</u>ttention <u>P</u>ortfolio <u>P</u>olicy)** is a novel and efficient pattern recognition framework for portfolio management (PM). Traditional Transformer models, despite their power, suffer from quadratic computational complexity, making them impractical for real-time portfolio rebalancing with long financial time series. SAPP addresses this critical challenge by introducing a dual-stage architecture with **near-linear complexity**.
 
 Our framework integrates:
 1.  **Stacked Sparse Transformer Blocks (STBs)**: To efficiently capture long-range temporal dependencies in financial data.
