@@ -1,7 +1,7 @@
 # SAPP: Sparse Attention Transformers for Pattern Recognition in Portfolio Management
 
 <div align="center">
-<img align="center" src=figures/SAPP.jpg width="40%"/> 
+<img align="center" src=figures/SAPP_logo.jpg width="40%"/> 
 
 <div>&nbsp;</div>
 
@@ -11,6 +11,69 @@
 [![License](https://img.shields.io/github/license/jiahaoli57/FinOL)](LICENSE)
 
 </div>
+
+## About SAPP
+
+**SAPP (Sparse Attention Portfolio Policy)** is a novel and efficient pattern recognition framework for portfolio management (PM). Traditional Transformer models, despite their power, suffer from quadratic computational complexity, making them impractical for real-time portfolio rebalancing with long financial time series. SAPP addresses this critical challenge by introducing a dual-stage architecture with **near-linear complexity**.
+
+Our framework integrates:
+1.  **Stacked Sparse Transformer Blocks (STBs)**: To efficiently capture long-range temporal dependencies in financial data.
+2.  **A Correlation Information Decision Module (CIDM)**: To explicitly model cross-asset correlations for informed investment decisions.
+
+Trained within a deep reinforcement learning framework, SAPP learns robust policies that consistently outperform a wide range of classic and state-of-the-art strategies, including its full-attention counterpart, demonstrating superior performance, efficiency, and scalability.
+
+## Key Features
+
+* **🚀 Near-Linear Complexity**: Employs a novel sparse attention mechanism combining local, global, and random patterns, making it highly scalable for long sequences and high-frequency data.
+* **🧠 Intelligent Cross-Asset Analysis**: The CIDM module effectively models the interrelationships between assets, leading to more sophisticated and robust portfolio allocation decisions.
+* **📈 State-of-the-Art Performance**: Empirically validated across four major stock market indices (NYSE 100, DJCA, EURO 50, CSI 300), SAPP demonstrates superior returns and risk-adjusted performance.
+* **🔬 Interpretable & Robust**: Provides a degree of interpretability through feature attribution and causal analysis, and shows strong robustness to hyper-parameter variations and input perturbations.
+
+## Architecture Overview
+
+The SAPP architecture consists of two main components: stacked STBs for efficient temporal feature extraction, and a CIDM for making final portfolio decisions based on asset interrelationships.
+
+
+
+<div align="center">
+<img align="center" src=figures/SAPP.png width="75%"/> 
+ <br>
+ <em>Figure 1: The overall architecture of SAPP, where stacked STBs are used to efficiently extract representations from financial time series data by employing the sparse self-attention mechanism, and the CIDM is responsible for considering interrelationships among assets and making PM decisions.</em>
+</div>
+
+## Performance Highlights
+
+SAPP (black line) consistently achieves the highest cumulative wealth across all tested datasets, significantly outperforming benchmark strategies and other Transformer-based models.
+
+<div align="center">
+
+<table >
+  <tr>
+    <td align="center" style="border:none;">
+      <img src="figures/fig-cw-1-eps-converted-to-1.png" width="420">
+      <br><sub>(a) NYSE 100</sub>
+    </td>
+    <td align="center" style="border:none;">
+      <img src="figures/fig-cw-1-eps-converted-to-2.png" width="420">
+      <br><sub>(b) DJCA</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="border:none;">
+      <img src="figures/fig-cw-1-eps-converted-to-3.png" width="420">
+      <br><sub>(c) EURO 50</sub>
+    </td>
+    <td align="center" style="border:none;">
+      <img src="figures/fig-cw-1-eps-converted-to-4.png" width="420">
+      <br><sub>(d) CSI 300</sub>
+    </td>
+  </tr>
+</table>
+
+<em>Figure 2: Out-of-sample daily cumulative wealth achieved by the main strategies on the four datasets.</em>
+
+</div>
+
 
 ## Baseline Implementations
 
