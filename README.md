@@ -36,7 +36,7 @@ The SAPP architecture consists of two main components: stacked STBs for efficien
 
 
 <div align="center">
-<img align="center" src=figures/SAPP.png width="75%"/> 
+<img align="center" src=figures/SAPP.png width="70%"/> 
  <br>
  <em>Figure 1: The overall architecture of SAPP, where stacked STBs are used to efficiently extract representations from financial time series data by employing the sparse self-attention mechanism, and the CIDM is responsible for considering interrelationships among assets and making PM decisions.</em>
 </div>
@@ -50,21 +50,19 @@ SAPP (black line) consistently achieves the highest cumulative wealth across all
 <table >
   <tr>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-1-eps-converted-to-1.png" width="420">
+      <img src="figures/fig-cw-1-eps-converted-to-1.png" width="220">
       <br><sub>(a) NYSE 100</sub>
     </td>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-1-eps-converted-to-2.png" width="420">
+      <img src="figures/fig-cw-2-eps-converted-to-1.png" width="220">
       <br><sub>(b) DJCA</sub>
     </td>
-  </tr>
-  <tr>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-1-eps-converted-to-3.png" width="420">
+      <img src="figures/fig-cw-3-eps-converted-to-1.png" width="220">
       <br><sub>(c) EURO 50</sub>
     </td>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-1-eps-converted-to-4.png" width="420">
+      <img src="figures/fig-cw-4-eps-converted-to-1.png" width="220">
       <br><sub>(d) CSI 300</sub>
     </td>
   </tr>
