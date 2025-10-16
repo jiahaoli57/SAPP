@@ -50,19 +50,19 @@ SAPP (black line) consistently achieves the highest cumulative wealth across all
 <table >
   <tr>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-1-eps-converted-to-1.png" width="220">
+      <img src="figures/fig-cw-1-eps-converted-to-1.png" width="480">
       <br><sub>(a) NYSE 100</sub>
     </td>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-2-eps-converted-to-1.png" width="220">
+      <img src="figures/fig-cw-2-eps-converted-to-1.png" width="480">
       <br><sub>(b) DJCA</sub>
     </td>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-3-eps-converted-to-1.png" width="220">
+      <img src="figures/fig-cw-3-eps-converted-to-1.png" width="480">
       <br><sub>(c) EURO 50</sub>
     </td>
     <td align="center" style="border:none;">
-      <img src="figures/fig-cw-4-eps-converted-to-1.png" width="220">
+      <img src="figures/fig-cw-4-eps-converted-to-1.png" width="480">
       <br><sub>(d) CSI 300</sub>
     </td>
   </tr>
