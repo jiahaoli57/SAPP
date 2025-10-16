@@ -1,0 +1,659 @@
+{
+    "_note1": "--------------------------------------- General Configuration ------------------------------------------",
+    "DEVICE": "cuda",
+    "MANUAL_SEED": 42,
+    "DEVICE_IDS": [],
+    "CHECK_UPDATE": false,
+    "DOWNLOAD_DATA": false,
+    "_note2": "-------------------------------------- Data Layer Configuration ----------------------------------------",
+    "LOAD_LOCAL_DATALOADER": false,
+    "DATASET_NAME": "CSI300",
+    "DATASET_SPLIT_CONFIG": {
+        "NYSE(O)": {
+            "TRAIN_START_TIMESTAMP": "1962-07-03",
+            "TRAIN_END_TIMESTAMP": "1976-01-21",
+            "VAL_START_TIMESTAMP": "1976-01-22",
+            "VAL_END_TIMESTAMP": "1980-07-11",
+            "TEST_START_TIMESTAMP": "1980-07-14",
+            "TEST_END_TIMESTAMP": "1984-12-31"
+        },
+        "NYSE(N)": {
+            "TRAIN_START_TIMESTAMP": "1985-01-02",
+            "TRAIN_END_TIMESTAMP": "2000-04-06",
+            "VAL_START_TIMESTAMP": "2000-04-07",
+            "VAL_END_TIMESTAMP": "2005-05-20",
+            "TEST_START_TIMESTAMP": "2005-05-23",
+            "TEST_END_TIMESTAMP": "2010-06-30"
+        },
+        "DJIA": {
+            "TRAIN_START_TIMESTAMP": "2001-01-14",
+            "TRAIN_END_TIMESTAMP": "2002-04-01",
+            "VAL_START_TIMESTAMP": "2002-04-02",
+            "VAL_END_TIMESTAMP": "2002-08-21",
+            "TEST_START_TIMESTAMP": "2002-08-22",
+            "TEST_END_TIMESTAMP": "2003-01-14"
+        },
+        "SP500": {
+            "TRAIN_START_TIMESTAMP": "1998-01-02",
+            "TRAIN_END_TIMESTAMP": "2001-01-12",
+            "VAL_START_TIMESTAMP": "2001-01-16",
+            "VAL_END_TIMESTAMP": "2002-01-25",
+            "TEST_START_TIMESTAMP": "2002-01-28",
+            "TEST_END_TIMESTAMP": "2003-01-31"
+        },
+        "TSE": {
+            "TRAIN_START_TIMESTAMP": "1995-01-12",
+            "TRAIN_END_TIMESTAMP": "1997-05-28",
+            "VAL_START_TIMESTAMP": "1997-05-29",
+            "VAL_END_TIMESTAMP": "1998-03-13",
+            "TEST_START_TIMESTAMP": "1998-03-16",
+            "TEST_END_TIMESTAMP": "1998-12-31"
+        },
+        "SSE": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "HSI": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "CMEG": {
+            "TRAIN_START_TIMESTAMP": "2010-07-05",
+            "TRAIN_END_TIMESTAMP": "2018-04-09",
+            "VAL_START_TIMESTAMP": "2018-04-16",
+            "VAL_END_TIMESTAMP": "2020-11-16",
+            "TEST_START_TIMESTAMP": "2020-11-23",
+            "TEST_END_TIMESTAMP": "2023-06-26"
+        },
+        "CRYPTO": {
+            "TRAIN_START_TIMESTAMP": "2017-11-09",
+            "TRAIN_END_TIMESTAMP": "2021-08-22",
+            "VAL_START_TIMESTAMP": "2021-08-23",
+            "VAL_END_TIMESTAMP": "2022-11-26",
+            "TEST_START_TIMESTAMP": "2022-11-27",
+            "TEST_END_TIMESTAMP": "2024-03-01"
+        },
+        "NYSE_US_100": {
+            "TRAIN_START_TIMESTAMP": "2016-01-04",
+            "TRAIN_END_TIMESTAMP": "2022-10-07",
+            "VAL_START_TIMESTAMP": "2022-10-10",
+            "VAL_END_TIMESTAMP": "2024-03-20",
+            "TEST_START_TIMESTAMP": "2024-03-21",
+            "TEST_END_TIMESTAMP": "2025-09-01"
+        },
+        "DJCA": {
+            "TRAIN_START_TIMESTAMP": "2016-01-04",
+            "TRAIN_END_TIMESTAMP": "2022-10-07",
+            "VAL_START_TIMESTAMP": "2022-10-10",
+            "VAL_END_TIMESTAMP": "2024-03-20",
+            "TEST_START_TIMESTAMP": "2024-03-21",
+            "TEST_END_TIMESTAMP": "2025-09-01"
+        },
+        "EURO_STOXX_50": {
+            "TRAIN_START_TIMESTAMP": "2016-01-04",
+            "TRAIN_END_TIMESTAMP": "2022-10-07",
+            "VAL_START_TIMESTAMP": "2022-10-10",
+            "VAL_END_TIMESTAMP": "2024-03-20",
+            "TEST_START_TIMESTAMP": "2024-03-21",
+            "TEST_END_TIMESTAMP": "2025-09-01"
+        },
+        "CSI300": {
+            "TRAIN_START_TIMESTAMP": "2016-01-04",
+            "TRAIN_END_TIMESTAMP": "2022-10-07",
+            "VAL_START_TIMESTAMP": "2022-10-10",
+            "VAL_END_TIMESTAMP": "2024-03-20",
+            "TEST_START_TIMESTAMP": "2024-03-21",
+            "TEST_END_TIMESTAMP": "2025-09-01"
+        },
+        "CustomDataset": {
+            "TRAIN_START_TIMESTAMP": "",
+            "TRAIN_END_TIMESTAMP": "",
+            "VAL_START_TIMESTAMP": "",
+            "VAL_END_TIMESTAMP": "",
+            "TEST_START_TIMESTAMP": "",
+            "TEST_END_TIMESTAMP": ""
+        }
+    },
+    "FEATURE_ENGINEERING_CONFIG": {
+        "INCLUDE_OHLCV_FEATURES": true,
+        "INCLUDE_OVERLAP_FEATURES": true,
+        "INCLUDE_MOMENTUM_FEATURES": true,
+        "INCLUDE_VOLUME_FEATURES": true,
+        "INCLUDE_CYCLE_FEATURES": true,
+        "INCLUDE_PRICE_FEATURES": true,
+        "INCLUDE_VOLATILITY_FEATURES": true,
+        "INCLUDE_PATTERN_FEATURES": true
+    },
+    "DATA_AUGMENTATION_CONFIG": {
+        "WINDOW_DATA": {
+            "INCLUDE_WINDOW_DATA": true,
+            "WINDOW_SIZE": 100
+        },
+        "IMAGE_DATA": {
+            "INCLUDE_IMAGE_DATA": false,
+            "WINDOW_SIZE": 5,
+            "SIDE_LENGTH": 100
+        }
+    },
+    "SCALER": "StandardScaler",
+    "BATCH_SIZE": 256,
+    "NUM_DAYS_PER_YEAR": {
+        "NYSE(O)": 252,
+        "NYSE(N)": 252,
+        "DJIA": 252,
+        "SP500": 252,
+        "TSE": 252,
+        "SSE": 52,
+        "HSI": 52,
+        "CMEG": 52,
+        "CRYPTO": 365,
+        "NYSE_US_100": 256,
+        "DJCA": 256,
+        "EURO_STOXX_50": 256,
+        "CSI300": 256,
+        "CustomDataset": 0
+    },
+    "_note3": "-------------------------------------- Model Layer Configuration ---------------------------------------",
+    "MODEL_NAME": "SAPP",
+    "MODEL_PARAMS": {
+        "AlphaPortfolio": {
+            "NUM_LAYERS": 3,
+            "DIM_EMBEDDING": 192,
+            "DIM_FEEDFORWARD": 160,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.25
+        },
+        "AlphaStock": {
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 336,
+            "DROPOUT": 0.05
+        },
+        "CNN": {
+            "KERNEL_SIZE": 3,
+            "STRIDE": 1,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.2
+        },
+        "CNN_JF": {
+            "KERNEL_SIZE_HEIGHT": 5,
+            "KERNEL_SIZE_WIDTH": 3,
+            "STRIDE_HEIGHT": 3,
+            "STRIDE_WIDTH": 1,
+            "DILATION_HEIGHT": 2,
+            "DILATION_WIDTH": 1,
+            "PADDING_HEIGHT": 12,
+            "PADDING_WIDTH": 1,
+            "DROPOUT": 0.1
+        },
+        "DNN": {
+            "NUM_LAYERS": 1,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.0
+        },
+        "GRU": {
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 256,
+            "DROPOUT": 0.0
+        },
+        "LSRE-CAAN": {
+            "NUM_LAYERS": 1,
+            "NUM_LATENTS": 12,
+            "LATENT_DIM": 128,
+            "CROSS_HEADS": 4,
+            "LATENT_HEADS": 4,
+            "CROSS_DIM_HEAD": 64,
+            "LATENT_DIM_HEAD": 64,
+            "DROPOUT": 0.1
+        },
+        "LSTM": {
+            "NUM_LAYERS": 2,
+            "HIDDEN_SIZE": 128,
+            "DROPOUT": 0.1
+        },
+        "RNN": {
+            "NUM_LAYERS": 3,
+            "HIDDEN_SIZE": 224,
+            "DROPOUT": 0.0
+        },
+        "SAPP": {
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 64,
+            "NUM_HEADS": 1,
+            "BLOCK_SIZE": 4,
+            "DROPOUT": 0.1
+        },
+        "SparseTransformer": {
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 64,
+            "NUM_HEADS": 1,
+            "SPARSITY_STRIDE": 10,
+            "DROPOUT": 0.1
+        },
+        "DRSA": {
+            "NUM_LAYERS": 4,
+            "HIDDEN_SIZE": 64,
+            "NUM_HEADS": 1,
+            "DRSA_PARTITIONS": 8,
+            "DRSA_TOP_K": 4,
+            "DROPOUT": 0.1
+        },
+        "TCN": {
+            "OUT_CHANNELS": 128,
+            "KERNEL_SIZE": 3,
+            "STRIDE": 1,
+            "HIDDEN_SIZE": 32,
+            "DROPOUT": 0.2
+        },
+        "Transformer": {
+            "NUM_LAYERS": 1,
+            "DIM_EMBEDDING": 256,
+            "DIM_FEEDFORWARD": 128,
+            "NUM_HEADS": 1,
+            "DROPOUT": 0.05
+        },
+        "CustomModel": {
+            "PARAMETER1": 4,
+            "PARAMETER2": 128
+        }
+    },
+    "MODEL_PARAMS_SPACE": {
+        "AlphaPortfolio": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "DIM_EMBEDDING": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DIM_FEEDFORWARD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "NUM_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    1
+                ],
+                "step": 1
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "AlphaStock": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "DNN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0
+                ],
+                "step": 0.05
+            }
+        },
+        "GRU": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSRE-CAAN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "NUM_LATENTS": {
+                "type": "int",
+                "range": [
+                    1,
+                    12
+                ],
+                "step": 1
+            },
+            "LATENT_DIM": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "CROSS_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "LATENT_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "CROSS_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "LATENT_DIM_HEAD": {
+                "type": "int",
+                "range": [
+                    32,
+                    256
+                ],
+                "step": 32
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "LSTM": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "RNN": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "SAPP": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "HIDDEN_SIZE": {
+                "type": "int",
+                "range": [
+                    32,
+                    128
+                ],
+                "step": 32
+            },
+            "NUM_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    1
+                ],
+                "step": 1
+            },
+            "BLOCK_SIZE": {
+                "type": "int",
+                "range": [
+                    2,
+                    6
+                ],
+                "step": 2
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "Transformer": {
+            "NUM_LAYERS": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "DIM_EMBEDDING": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "DIM_FEEDFORWARD": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            },
+            "NUM_HEADS": {
+                "type": "int",
+                "range": [
+                    1,
+                    1
+                ],
+                "step": 1
+            },
+            "DROPOUT": {
+                "type": "float",
+                "range": [
+                    0,
+                    0.5
+                ],
+                "step": 0.05
+            }
+        },
+        "CustomModel": {
+            "PARAMETER1": {
+                "type": "int",
+                "range": [
+                    1,
+                    4
+                ],
+                "step": 1
+            },
+            "PARAMETER2": {
+                "type": "int",
+                "range": [
+                    32,
+                    512
+                ],
+                "step": 16
+            }
+        }
+    },
+    "_note4": "----------------------------------- Optimization Layer Configuration -----------------------------------",
+    "NUM_EPOCHES": 100,
+    "PATIENCE": 10,
+    "SAVE_EVERY": 1,
+    "OPTIMIZER_NAME": "Lamb",
+    "LEARNING_RATE": 0.004,
+    "CRITERION_NAME": "LogWealthL2Smooth",
+    "LAMBDA_L2": 0.001,
+    "TUNE_PARAMETERS": false,
+    "NUM_TRIALS": 10,
+    "SAMPLER_NAME": "TPESampler",
+    "PRUNER_NAME": "MedianPruner",
+    "WRAPPED_PRUNER_NAME": "MedianPruner",
+    "_note5": "------------------------------------ Evaluation Layer Configuration ------------------------------------",
+    "PLOT_LANGUAGE": "en",
+    "PROP_WINNERS": 0.5,
+    "INTERPRETABLE_ANALYSIS_CONFIG": {
+        "INCLUDE_INTERPRETABILITY_ANALYSIS": true,
+        "INCLUDE_ECONOMIC_DISTILLATION": false,
+        "PROP_DISTILLED_FEATURES": 0.7,
+        "DISTILLER_NAME": "Lasso",
+        "Y_NAME": "Scores"
+    },
+    "MARKERS": [
+        "o",
+        "^",
+        "<",
+        ">",
+        "s",
+        "p",
+        "h",
+        "H",
+        "D",
+        "d"
+    ],
+    "MARKEVERY": {
+        "NYSE(O)": 50,
+        "NYSE(N)": 55,
+        "DJIA": 3,
+        "SP500": 7,
+        "TSE": 6,
+        "SSE": 4,
+        "HSI": 4,
+        "CMEG": 4,
+        "NYSE_US_100": 20,
+        "DJCA": 20,
+        "EURO_STOXX_50": 20,
+        "CSI300": 20,
+        "CRYPTO": 13
+    }
+}
